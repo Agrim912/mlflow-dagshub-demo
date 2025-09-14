@@ -6,7 +6,11 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score,confusion_matrix, classification_report
 import matplotlib.pyplot as plt
 import seaborn as sns
-mlflow.set_tracking_uri('http://localhost:5000')
+
+import dagshub
+dagshub.init(repo_owner='Agrim912', repo_name='mlflow-dagshub-demo', mlflow=True)
+
+mlflow.set_tracking_uri('https://dagshub.com/Agrim912/mlflow-dagshub-demo.mlflow')
 
 # Load the Iris dataset
 iris = load_iris()
