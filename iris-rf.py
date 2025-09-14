@@ -32,7 +32,7 @@ mlflow.set_experiment("iris-dt")
 # with mlflow.start_run(experiment_id="610707189609199498"):
 # with mlflow.start_run(run_name="<give-custom-name>"):
 with mlflow.start_run():
-    rf=RandomForestClassifier(n_estimators=n_estimators,emax_depth=max_depth, random_state=42)
+    rf=RandomForestClassifier(n_estimators=n_estimators,max_depth=max_depth, random_state=42)
 
     rf.fit(X_train, y_train)
 
